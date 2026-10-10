@@ -1,0 +1,30 @@
+ARTICLE 111: Supplier Certifications: ISO 13485, CE Marking and FDA Explained
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Supplier Certifications: ISO 13485, CE Marking and FDA Explained
+Slug (URL):      supplier-certifications-iso-13485-ce-fda
+Category:        Buying Guides
+Tags:            certifications, ISO 13485, CE marking, FDA
+Excerpt:         What the common quality and regulatory certifications mean, what they do not mean, and how to check them.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     supplier certifications
+Keyphrase synonyms:  ISO 13485 instruments, CE marking surgical instruments, FDA registration instruments
+SEO title:           Supplier Certifications: ISO 13485, CE and FDA   (46 characters)
+Slug:                supplier-certifications-iso-13485-ce-fda
+Meta description:    Supplier certifications for instrument buyers: what ISO 13485, CE marking under the EU MDR and FDA registration mean, and how to verify certificates.   (149 characters)
+
+FEATURED IMAGE
+--------------
+File:        supplier-certifications-iso-13485-ce-fda.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a certificate with a seal, illustrating the Gami Surgical guide to supplier certifications
+Title:       Supplier Certifications
+Caption:     Supplier Certifications. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Supplier Certifications: ISO 13485, CE Marking and FDA Explained".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

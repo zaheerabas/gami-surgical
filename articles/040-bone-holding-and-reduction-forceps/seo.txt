@@ -1,0 +1,30 @@
+ARTICLE 040: Bone-Holding and Reduction Forceps: A Guide to Common Patterns
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Bone-Holding and Reduction Forceps: A Guide to Common Patterns
+Slug (URL):      bone-holding-and-reduction-forceps
+Category:        Specialty Instruments
+Tags:            bone-holding forceps, reduction forceps, orthopaedic instruments, fracture instruments
+Excerpt:         The orthopaedic forceps used to hold bone and keep fractures reduced, and the details that matter when ordering them.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     bone-holding forceps
+Keyphrase synonyms:  bone clamps, reduction forceps, Lane forceps, Verbrugge forceps
+SEO title:           Bone-Holding and Reduction Forceps Explained   (44 characters)
+Slug:                bone-holding-and-reduction-forceps
+Meta description:    Bone-holding forceps and reduction forceps explained: Lane, Verbrugge, Kern, Lowman and pointed reduction patterns, locks, sizes and uses.   (138 characters)
+
+FEATURED IMAGE
+--------------
+File:        bone-holding-and-reduction-forceps.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a curved clamp, illustrating the Gami Surgical guide to bone-holding forceps
+Title:       Bone-Holding and Reduction Forceps
+Caption:     Bone-Holding and Reduction Forceps. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Bone-Holding and Reduction Forceps: A Guide to Common Patterns".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

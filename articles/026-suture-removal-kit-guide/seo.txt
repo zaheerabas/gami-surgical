@@ -1,0 +1,30 @@
+ARTICLE 026: What Goes in a Suture Removal Kit
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      What Goes in a Suture Removal Kit
+Slug (URL):      suture-removal-kit-guide
+Category:        Surgical Instruments
+Tags:            suture removal, stitch scissors, Littauer scissors, clinic equipment
+Excerpt:         The instruments needed to remove stitches and staples quickly and safely, and what to look for in reusable kits.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     suture removal kit
+Keyphrase synonyms:  stitch removal kit, suture removal set, stitch scissors
+SEO title:           Suture Removal Kit: What It Contains and How to Choose   (54 characters)
+Slug:                suture-removal-kit-guide
+Meta description:    What goes in a suture removal kit: stitch scissors such as Littauer and Spencer, fine forceps, staple removers, and how to choose reusable instruments.   (151 characters)
+
+FEATURED IMAGE
+--------------
+File:        suture-removal-kit-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of surgical scissors, illustrating the Gami Surgical guide to suture removal kit
+Title:       Suture Removal Kits
+Caption:     Suture Removal Kits. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "What Goes in a Suture Removal Kit".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

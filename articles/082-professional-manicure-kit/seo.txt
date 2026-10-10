@@ -1,0 +1,30 @@
+ARTICLE 082: Professional Manicure Kit: What Every Nail Technician Needs
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Professional Manicure Kit: What Every Nail Technician Needs
+Slug (URL):      professional-manicure-kit
+Category:        Beauty Instruments
+Tags:            manicure kit, nail technician, salon equipment, beauty instruments
+Excerpt:         A practical tool list for nail technicians and salons, and how to plan enough sets for clean tools at every appointment.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     professional manicure kit
+Keyphrase synonyms:  manicure set, nail technician kit, manicure tools list
+SEO title:           Professional Manicure Kit: What Every Nail Tech Needs   (53 characters)
+Slug:                professional-manicure-kit
+Meta description:    What goes in a professional manicure kit: cuticle nippers, pushers, cuticle scissors, nail clippers, files and buffers, plus how many sets a salon needs.   (153 characters)
+
+FEATURED IMAGE
+--------------
+File:        professional-manicure-kit.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of nippers with a double spring, illustrating the Gami Surgical guide to professional manicure kit
+Title:       Professional Manicure Kits
+Caption:     Professional Manicure Kits. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Professional Manicure Kit: What Every Nail Technician Needs".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

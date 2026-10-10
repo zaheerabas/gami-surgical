@@ -1,0 +1,30 @@
+ARTICLE 043: Vaginal Specula: Graves, Pederson, Cusco and Sims Compared
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Vaginal Specula: Graves, Pederson, Cusco and Sims Compared
+Slug (URL):      vaginal-specula-graves-cusco-sims
+Category:        Specialty Instruments
+Tags:            vaginal specula, gynaecology instruments, Graves speculum, Cusco speculum
+Excerpt:         The main vaginal speculum patterns, how they differ, and why many clinics keep several sizes in reusable stainless steel.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     vaginal specula
+Keyphrase synonyms:  vaginal speculum, Graves speculum, Cusco speculum, Sims speculum
+SEO title:           Vaginal Specula: Graves, Pederson, Cusco and Sims   (49 characters)
+Slug:                vaginal-specula-graves-cusco-sims
+Meta description:    Vaginal specula compared: Graves, Pederson, Cusco and Sims patterns, sizes, locking mechanisms, and how clinics choose reusable stainless steel specula.   (152 characters)
+
+FEATURED IMAGE
+--------------
+File:        vaginal-specula-graves-cusco-sims.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a speculum, illustrating the Gami Surgical guide to vaginal specula
+Title:       Vaginal Specula
+Caption:     Vaginal Specula. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Vaginal Specula: Graves, Pederson, Cusco and Sims Compared".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

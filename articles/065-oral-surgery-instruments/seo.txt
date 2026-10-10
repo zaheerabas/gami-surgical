@@ -1,0 +1,30 @@
+ARTICLE 065: Oral Surgery Instruments: Beyond Forceps and Elevators
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Oral Surgery Instruments: Beyond Forceps and Elevators
+Slug (URL):      oral-surgery-instruments
+Category:        Dental Instruments
+Tags:            oral surgery instruments, periosteal elevator, bone file, dental instruments
+Excerpt:         The instruments that support surgical extractions and minor oral surgery, beyond the basic forceps and elevators.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     oral surgery instruments
+Keyphrase synonyms:  dental surgical instruments, periosteal elevators, bone files, dental rongeurs
+SEO title:           Oral Surgery Instruments: Beyond Forceps and Elevators   (54 characters)
+Slug:                oral-surgery-instruments
+Meta description:    Oral surgery instruments explained: periosteal elevators, retractors, bone files, rongeurs, needle holders, scissors and suction for surgical extractions.   (154 characters)
+
+FEATURED IMAGE
+--------------
+File:        oral-surgery-instruments.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a tooth and a dental instrument, illustrating the Gami Surgical guide to oral surgery instruments
+Title:       Oral Surgery Instruments
+Caption:     Oral Surgery Instruments. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Oral Surgery Instruments: Beyond Forceps and Elevators".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

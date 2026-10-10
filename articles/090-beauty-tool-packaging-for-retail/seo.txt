@@ -1,0 +1,30 @@
+ARTICLE 090: Packaging Beauty Tools for Retail: Options and Tips
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Packaging Beauty Tools for Retail: Options and Tips
+Slug (URL):      beauty-tool-packaging-for-retail
+Category:        Beauty Instruments
+Tags:            beauty tool packaging, private label, retail, beauty instruments
+Excerpt:         How to package tweezers, nippers and manicure kits so they arrive protected and sell well on shelves and online.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     beauty tool packaging
+Keyphrase synonyms:  retail packaging for tweezers, manicure set cases, private label packaging
+SEO title:           Packaging Beauty Tools for Retail: Options and Tips   (51 characters)
+Slug:                beauty-tool-packaging-for-retail
+Meta description:    Beauty tool packaging for retail: pouches, blister cards, tins, zip cases and gift boxes, protecting tips, labelling and barcodes, and branding tips.   (149 characters)
+
+FEATURED IMAGE
+--------------
+File:        beauty-tool-packaging-for-retail.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a shipping box, illustrating the Gami Surgical guide to beauty tool packaging
+Title:       Packaging for Beauty Tools
+Caption:     Packaging for Beauty Tools. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Packaging Beauty Tools for Retail: Options and Tips".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

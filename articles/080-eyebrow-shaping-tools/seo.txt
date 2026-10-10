@@ -1,0 +1,30 @@
+ARTICLE 080: Eyebrow Shaping Tools: The Professional Kit
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Eyebrow Shaping Tools: The Professional Kit
+Slug (URL):      eyebrow-shaping-tools
+Category:        Beauty Instruments
+Tags:            eyebrow tools, brow tweezers, eyebrow scissors, beauty instruments
+Excerpt:         The tools behind well-shaped brows, and how to put together a professional or retail eyebrow kit.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     eyebrow shaping tools
+Keyphrase synonyms:  eyebrow tools, brow kit, eyebrow scissors, brow tweezers
+SEO title:           Eyebrow Shaping Tools: The Professional Kit   (43 characters)
+Slug:                eyebrow-shaping-tools
+Meta description:    Eyebrow shaping tools for professionals and retail kits: slant and pointed tweezers, brow scissors, spoolie brushes, measuring tools and quality checks.   (152 characters)
+
+FEATURED IMAGE
+--------------
+File:        eyebrow-shaping-tools.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of slant tweezers and an eyebrow, illustrating the Gami Surgical guide to eyebrow shaping tools
+Title:       Eyebrow Shaping Tools
+Caption:     Eyebrow Shaping Tools. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Eyebrow Shaping Tools: The Professional Kit".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

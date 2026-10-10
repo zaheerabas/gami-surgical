@@ -1,0 +1,30 @@
+ARTICLE 036: Instrument Trays and Sterilization Containers: How to Choose
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Instrument Trays and Sterilization Containers: How to Choose
+Slug (URL):      instrument-trays-and-sterilization-containers
+Category:        Surgical Instruments
+Tags:            instrument trays, sterilization containers, instrument sets, sterile services
+Excerpt:         Perforated baskets, solid trays, boxes and containers: what each is for and how to choose them for your instrument sets.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     instrument trays
+Keyphrase synonyms:  sterilization trays, instrument boxes, instrument baskets, sterilization containers
+SEO title:           Instrument Trays and Sterilization Containers   (45 characters)
+Slug:                instrument-trays-and-sterilization-containers
+Meta description:    How to choose instrument trays, perforated baskets, boxes and sterilization containers: materials, sizes, perforations and layouts for reprocessing.   (148 characters)
+
+FEATURED IMAGE
+--------------
+File:        instrument-trays-and-sterilization-containers.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of an instrument tray with scalpel, scissors and forceps, illustrating the Gami Surgical guide to instrument trays
+Title:       Instrument Trays and Containers
+Caption:     Instrument Trays and Containers. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Instrument Trays and Sterilization Containers: How to Choose".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

@@ -1,0 +1,30 @@
+ARTICLE 112: Budgeting Instruments for a New Clinic
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Budgeting Instruments for a New Clinic
+Slug (URL):      budgeting-instruments-for-a-new-clinic
+Category:        Buying Guides
+Tags:            budgeting, clinic setup, procurement, buying guide
+Excerpt:         How to build a realistic instrument budget for a new clinic without overspending or running short.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     budgeting instruments
+Keyphrase synonyms:  clinic instrument budget, new clinic setup costs, instrument purchasing plan
+SEO title:           Budgeting Instruments for a New Clinic   (38 characters)
+Slug:                budgeting-instruments-for-a-new-clinic
+Meta description:    A practical approach to budgeting instruments for a new clinic: procedure-based lists, set quantities, quality tiers, spares, reprocessing and phasing.   (151 characters)
+
+FEATURED IMAGE
+--------------
+File:        budgeting-instruments-for-a-new-clinic.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of an instrument tray with scalpel, scissors and forceps, illustrating the Gami Surgical guide to budgeting instruments
+Title:       Budgeting for Clinic Instruments
+Caption:     Budgeting for Clinic Instruments. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Budgeting Instruments for a New Clinic".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

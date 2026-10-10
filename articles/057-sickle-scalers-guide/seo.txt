@@ -1,0 +1,30 @@
+ARTICLE 057: Sickle Scalers: Design, Patterns and When to Use Them
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Sickle Scalers: Design, Patterns and When to Use Them
+Slug (URL):      sickle-scalers-guide
+Category:        Dental Instruments
+Tags:            sickle scalers, dental scalers, periodontal instruments, dental hygiene
+Excerpt:         Why sickle scalers are used above the gumline, the common patterns, and how they differ from curettes.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     sickle scalers
+Keyphrase synonyms:  dental scalers, H6/H7 scaler, Jacquette scaler, 204S scaler
+SEO title:           Sickle Scalers: Design, Patterns and When to Use Them   (53 characters)
+Slug:                sickle-scalers-guide
+Meta description:    Sickle scalers explained: the pointed triangular blade, anterior and posterior designs, H6/H7, 204S and Jacquette patterns, and sharpening tips.   (144 characters)
+
+FEATURED IMAGE
+--------------
+File:        sickle-scalers-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a dental mirror and probe, illustrating the Gami Surgical guide to sickle scalers
+Title:       Sickle Scalers
+Caption:     Sickle Scalers. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Sickle Scalers: Design, Patterns and When to Use Them".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

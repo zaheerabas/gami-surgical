@@ -1,0 +1,30 @@
+ARTICLE 078: Cuticle Pushers: Shapes, Ends and How to Use Them
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Cuticle Pushers: Shapes, Ends and How to Use Them
+Slug (URL):      cuticle-pushers-guide
+Category:        Beauty Instruments
+Tags:            cuticle pushers, manicure tools, nail technician, beauty instruments
+Excerpt:         The most used tool in manicures: cuticle pusher shapes, which end does what, and how to choose a professional one.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     cuticle pushers
+Keyphrase synonyms:  cuticle pusher, cuticle remover tool, manicure pusher
+SEO title:           Cuticle Pushers: Shapes, Ends and How to Use Them   (49 characters)
+Slug:                cuticle-pushers-guide
+Meta description:    Cuticle pushers explained: rounded, square and narrow pusher ends, scraper and hatchet ends, double-ended tools, stainless steel quality and safe use.   (150 characters)
+
+FEATURED IMAGE
+--------------
+File:        cuticle-pushers-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a stainless steel file, illustrating the Gami Surgical guide to cuticle pushers
+Title:       Cuticle Pushers
+Caption:     Cuticle Pushers. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Cuticle Pushers: Shapes, Ends and How to Use Them".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

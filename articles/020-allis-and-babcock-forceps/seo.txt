@@ -1,0 +1,30 @@
+ARTICLE 020: Allis and Babcock Forceps: Grasping Forceps Compared
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Allis and Babcock Forceps: Grasping Forceps Compared
+Slug (URL):      allis-and-babcock-forceps
+Category:        Surgical Instruments
+Tags:            Allis forceps, Babcock forceps, grasping forceps, surgical instruments
+Excerpt:         One grips firmly with teeth, the other holds gently without them. When to use Allis and when to use Babcock forceps.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     Allis and Babcock forceps
+Keyphrase synonyms:  Allis forceps, Babcock forceps, tissue grasping forceps
+SEO title:           Allis and Babcock Forceps: Grasping Forceps Compared   (52 characters)
+Slug:                allis-and-babcock-forceps
+Meta description:    Allis and Babcock forceps compared: jaw designs, which tissue each is for, sizes, and what to check before buying these ring-handled grasping forceps.   (150 characters)
+
+FEATURED IMAGE
+--------------
+File:        allis-and-babcock-forceps.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a curved clamp, illustrating the Gami Surgical guide to Allis and Babcock forceps
+Title:       Allis and Babcock Forceps
+Caption:     Allis and Babcock Forceps. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Allis and Babcock Forceps: Grasping Forceps Compared".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

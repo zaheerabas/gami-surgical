@@ -1,0 +1,30 @@
+ARTICLE 074: Thinning Scissors: Teeth, Removal Rate and Texturising
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Thinning Scissors: Teeth, Removal Rate and Texturising
+Slug (URL):      thinning-scissors-guide
+Category:        Beauty Instruments
+Tags:            thinning scissors, texturising scissors, hairdressing, salon equipment
+Excerpt:         How the number and shape of teeth decide what thinning scissors do, and how to choose the right pair.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     thinning scissors
+Keyphrase synonyms:  texturising scissors, blending shears, thinning shears
+SEO title:           Thinning Scissors: Teeth, Removal Rate and Texturising   (54 characters)
+Slug:                thinning-scissors-guide
+Meta description:    Thinning scissors explained: number of teeth, removal rate, thinning vs texturising (chunking) blades, single- and double-sided designs, and care.   (146 characters)
+
+FEATURED IMAGE
+--------------
+File:        thinning-scissors-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of hairdressing scissors, illustrating the Gami Surgical guide to thinning scissors
+Title:       Thinning and Texturising Scissors
+Caption:     Thinning and Texturising Scissors. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Thinning Scissors: Teeth, Removal Rate and Texturising".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

@@ -1,0 +1,30 @@
+ARTICLE 100: How Long Do Surgical Instruments Last?
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      How Long Do Surgical Instruments Last?
+Slug (URL):      how-long-do-surgical-instruments-last
+Category:        Instrument Guides
+Tags:            instrument lifespan, instrument care, budgeting, sterile services
+Excerpt:         There is no fixed lifespan for an instrument. What decides how long instruments last, and how to make yours last longer.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     how long surgical instruments last
+Keyphrase synonyms:  instrument lifespan, instrument life cycle, replacing surgical instruments
+SEO title:           How Long Do Surgical Instruments Last?   (38 characters)
+Slug:                how-long-do-surgical-instruments-last
+Meta description:    How long surgical instruments last depends on quality, use and care. The factors that shorten or extend instrument life, and how to plan replacements.   (150 characters)
+
+FEATURED IMAGE
+--------------
+File:        how-long-do-surgical-instruments-last.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a magnifying glass with a check mark, illustrating the Gami Surgical guide to how long surgical instruments last
+Title:       How Long Do Instruments Last?
+Caption:     How Long Do Instruments Last?. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "How Long Do Surgical Instruments Last?".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

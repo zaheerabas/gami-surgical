@@ -1,7 +1,7 @@
 GAMI SURGICAL - BLOG ARTICLES
 =============================
 
-12 articles. Each folder contains:
+112 articles (001 to 112). Each folder contains:
 
   article.html   The article text only (no title, no <html>, <head> or <body>).
   <slug>.jpg     Featured image, 1600 x 900 px.
@@ -9,7 +9,7 @@ GAMI SURGICAL - BLOG ARTICLES
                  (focus keyphrase, SEO title, meta description) and the
                  image alt text, title and caption.
 
-SEO-overview.csv lists the SEO details of all 12 articles in one table
+SEO-overview.csv lists the SEO details of all 112 articles in one table
 (opens in Excel or Google Sheets).
 
 
@@ -39,10 +39,10 @@ The theme styles the boxes, tables and lists automatically.
 
 NOTES
 -----
-- Upload the image with its file name unchanged; the name is part of the SEO.
-- Articles 01 and 02 replace the two articles published earlier. If those are
-  already on your site, just update their text, featured image and SEO fields.
-- Article 10 uses the slug "types-of-tweezers". If you already published it as
-  "tweezers-guide", you can keep the old slug; then use "types of tweezers" as
-  the focus keyphrase anyway.
+- Upload each image with its file name unchanged; the name is part of the SEO.
+- These articles use six categories: Surgical Instruments, Specialty
+  Instruments (new), Dental Instruments, Beauty Instruments, Instrument
+  Guides and Buying Guides. Create any that do not exist yet.
+- Publishing a few articles per week, rather than all at once, looks more
+  natural to readers and search engines.
 - Featured images show best with theme version 1.16.2 or later.

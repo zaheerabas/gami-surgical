@@ -1,0 +1,30 @@
+ARTICLE 060: Paediatric Extraction Forceps: Instruments for Primary Teeth
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Paediatric Extraction Forceps: Instruments for Primary Teeth
+Slug (URL):      paediatric-extraction-forceps
+Category:        Dental Instruments
+Tags:            paediatric dentistry, extraction forceps, children's dentistry, dental instruments
+Excerpt:         Why children's extraction forceps are smaller, which patterns are common, and how to build a paediatric extraction kit.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     paediatric extraction forceps
+Keyphrase synonyms:  pediatric dental forceps, children's extraction forceps, pedo forceps
+SEO title:           Paediatric Extraction Forceps for Primary Teeth   (47 characters)
+Slug:                paediatric-extraction-forceps
+Meta description:    Paediatric extraction forceps explained: smaller beaks and handles for primary teeth, common patterns such as 150S and 151S, and how to choose a kit.   (149 characters)
+
+FEATURED IMAGE
+--------------
+File:        paediatric-extraction-forceps.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of dental extraction forceps holding a tooth, illustrating the Gami Surgical guide to paediatric extraction forceps
+Title:       Paediatric Extraction Forceps
+Caption:     Paediatric Extraction Forceps. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Paediatric Extraction Forceps: Instruments for Primary Teeth".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

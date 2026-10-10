@@ -1,0 +1,30 @@
+ARTICLE 023: Metzenbaum Scissors: Uses, Sizes and How to Choose
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Metzenbaum Scissors: Uses, Sizes and How to Choose
+Slug (URL):      metzenbaum-scissors-guide
+Category:        Surgical Instruments
+Tags:            Metzenbaum scissors, dissecting scissors, surgical scissors, surgical instruments
+Excerpt:         The long-handled dissecting scissors for delicate tissue: when to use Metzenbaum scissors, which version to pick, and how to keep them sharp.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     Metzenbaum scissors
+Keyphrase synonyms:  Metz scissors, dissecting scissors, Metzenbaum dissecting scissors
+SEO title:           Metzenbaum Scissors: Uses, Sizes and How to Choose   (50 characters)
+Slug:                metzenbaum-scissors-guide
+Meta description:    Metzenbaum scissors explained: what they are for, curved or straight, lengths, blunt or sharp tips, supercut and tungsten carbide edges, and care.   (146 characters)
+
+FEATURED IMAGE
+--------------
+File:        metzenbaum-scissors-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of surgical scissors, illustrating the Gami Surgical guide to Metzenbaum scissors
+Title:       Metzenbaum Scissors
+Caption:     Metzenbaum Scissors. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Metzenbaum Scissors: Uses, Sizes and How to Choose".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

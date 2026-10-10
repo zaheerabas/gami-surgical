@@ -1,0 +1,30 @@
+ARTICLE 070: Starting a Dental Clinic: The Basic Instrument List
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Starting a Dental Clinic: The Basic Instrument List
+Slug (URL):      new-dental-clinic-instrument-list
+Category:        Dental Instruments
+Tags:            dental clinic setup, dental instruments, new practice, checklist
+Excerpt:         A practical starting list of hand instruments for a new dental practice, and a simple way to work out how many you need.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     dental clinic instrument list
+Keyphrase synonyms:  new dental practice instruments, dental clinic setup, dental instrument checklist
+SEO title:           Starting a Dental Clinic: Basic Instrument List   (47 characters)
+Slug:                new-dental-clinic-instrument-list
+Meta description:    A dental clinic instrument list for new practices: exam, hygiene, restorative, extraction and surgical instruments, plus how to estimate quantities.   (148 characters)
+
+FEATURED IMAGE
+--------------
+File:        new-dental-clinic-instrument-list.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a tooth and a dental instrument, illustrating the Gami Surgical guide to dental clinic instrument list
+Title:       Instruments for a New Dental Clinic
+Caption:     Instruments for a New Dental Clinic. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Starting a Dental Clinic: The Basic Instrument List".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

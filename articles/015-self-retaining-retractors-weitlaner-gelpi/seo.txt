@@ -1,0 +1,30 @@
+ARTICLE 015: Self-Retaining Retractors: Weitlaner, Gelpi and Other Patterns
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Self-Retaining Retractors: Weitlaner, Gelpi and Other Patterns
+Slug (URL):      self-retaining-retractors-weitlaner-gelpi
+Category:        Surgical Instruments
+Tags:            self-retaining retractors, Weitlaner, Gelpi, retractors, surgical instruments
+Excerpt:         How Weitlaner, Gelpi and other self-retaining retractors differ, which suits which wound, and what to check before buying.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     self-retaining retractors
+Keyphrase synonyms:  Weitlaner retractor, Gelpi retractor, ratchet retractor
+SEO title:           Self-Retaining Retractors: Weitlaner and Gelpi   (46 characters)
+Slug:                self-retaining-retractors-weitlaner-gelpi
+Meta description:    Self-retaining retractors compared: Weitlaner, Gelpi, West and frame retractors, prong types, sizes and locks, plus how to choose and care for them.   (148 characters)
+
+FEATURED IMAGE
+--------------
+File:        self-retaining-retractors-weitlaner-gelpi.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a surgical retractor, illustrating the Gami Surgical guide to self-retaining retractors
+Title:       Self-Retaining Retractors
+Caption:     Self-Retaining Retractors. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Self-Retaining Retractors: Weitlaner, Gelpi and Other Patterns".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

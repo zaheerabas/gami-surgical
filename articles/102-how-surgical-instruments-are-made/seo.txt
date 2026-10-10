@@ -1,0 +1,30 @@
+ARTICLE 102: How Surgical Instruments Are Made: From Steel to Finished Instrument
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      How Surgical Instruments Are Made: From Steel to Finished Instrument
+Slug (URL):      how-surgical-instruments-are-made
+Category:        Instrument Guides
+Tags:            manufacturing, forging, Sialkot, surgical instruments
+Excerpt:         A step-by-step look at the manufacturing process behind a pair of forceps or scissors.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     how surgical instruments are made
+Keyphrase synonyms:  surgical instrument manufacturing, instrument forging, instrument production process
+SEO title:           How Surgical Instruments Are Made: Step by Step   (47 characters)
+Slug:                how-surgical-instruments-are-made
+Meta description:    How surgical instruments are made: forging, trimming, machining, assembly, heat treatment, grinding, polishing, passivation, marking and inspection.   (148 characters)
+
+FEATURED IMAGE
+--------------
+File:        how-surgical-instruments-are-made.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of an instrument factory, illustrating the Gami Surgical guide to how surgical instruments are made
+Title:       How Surgical Instruments Are Made
+Caption:     How Surgical Instruments Are Made. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "How Surgical Instruments Are Made: From Steel to Finished Instrument".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

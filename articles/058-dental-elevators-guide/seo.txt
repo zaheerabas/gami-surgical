@@ -1,0 +1,30 @@
+ARTICLE 058: Dental Elevators: Coupland, Warwick James, Cryer and More
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Dental Elevators: Coupland, Warwick James, Cryer and More
+Slug (URL):      dental-elevators-guide
+Category:        Dental Instruments
+Tags:            dental elevators, extraction instruments, oral surgery, dental instruments
+Excerpt:         The common dental elevator patterns, what each one is designed to do, and what to check when ordering.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     dental elevators
+Keyphrase synonyms:  extraction elevators, Cryer elevators, Warwick James elevators, Coupland elevators
+SEO title:           Dental Elevators: Coupland, Warwick James and Cryer   (51 characters)
+Slug:                dental-elevators-guide
+Meta description:    Dental elevators explained: straight, Coupland, Warwick James, Cryer, Winter and apical patterns, how each one is used in extractions, and care tips.   (149 characters)
+
+FEATURED IMAGE
+--------------
+File:        dental-elevators-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a tooth and a dental instrument, illustrating the Gami Surgical guide to dental elevators
+Title:       Dental Elevators
+Caption:     Dental Elevators. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Dental Elevators: Coupland, Warwick James, Cryer and More".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

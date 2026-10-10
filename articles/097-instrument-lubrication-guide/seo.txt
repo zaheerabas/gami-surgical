@@ -1,0 +1,30 @@
+ARTICLE 097: Instrument Lubrication: Why, When and How
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Instrument Lubrication: Why, When and How
+Slug (URL):      instrument-lubrication-guide
+Category:        Instrument Guides
+Tags:            instrument lubrication, instrument milk, instrument care, sterile services
+Excerpt:         Stiff joints wear out instruments. How and when to lubricate hinged instruments, and which lubricants to avoid.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     instrument lubrication
+Keyphrase synonyms:  instrument milk, lubricating surgical instruments, instrument lubricant
+SEO title:           Instrument Lubrication: Why, When and How   (41 characters)
+Slug:                instrument-lubrication-guide
+Meta description:    Instrument lubrication explained: why hinged instruments need it, water-soluble instrument milk versus oils, when to lubricate, and how to avoid problems.   (154 characters)
+
+FEATURED IMAGE
+--------------
+File:        instrument-lubrication-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a drop of lubricant, illustrating the Gami Surgical guide to instrument lubrication
+Title:       Instrument Lubrication
+Caption:     Instrument Lubrication. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Instrument Lubrication: Why, When and How".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

@@ -1,0 +1,30 @@
+ARTICLE 042: Ear Instruments: Specula, Forceps, Curettes and Hooks
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Ear Instruments: Specula, Forceps, Curettes and Hooks
+Slug (URL):      ear-instruments-ent-guide
+Category:        Specialty Instruments
+Tags:            ear instruments, ENT instruments, Hartmann forceps, ear curettes
+Excerpt:         The basic ear instruments used in ENT clinics for examination, wax removal and foreign bodies, and what to look for.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     ear instruments
+Keyphrase synonyms:  ENT ear instruments, aural specula, Hartmann ear forceps, ear curettes
+SEO title:           Ear Instruments: Specula, Forceps, Curettes and Hooks   (53 characters)
+Slug:                ear-instruments-ent-guide
+Meta description:    Ear instruments explained: aural specula, Hartmann alligator forceps, ear curettes, Jobson Horne probes and ear hooks, and how ENT clinics choose them.   (151 characters)
+
+FEATURED IMAGE
+--------------
+File:        ear-instruments-ent-guide.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a speculum, illustrating the Gami Surgical guide to ear instruments
+Title:       Ear Instruments
+Caption:     Ear Instruments. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Ear Instruments: Specula, Forceps, Curettes and Hooks".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

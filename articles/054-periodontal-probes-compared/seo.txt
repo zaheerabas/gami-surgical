@@ -1,0 +1,30 @@
+ARTICLE 054: Periodontal Probes Compared: Williams, UNC 15, WHO and More
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Periodontal Probes Compared: Williams, UNC 15, WHO and More
+Slug (URL):      periodontal-probes-compared
+Category:        Dental Instruments
+Tags:            periodontal probes, Williams probe, UNC 15, dental hygiene
+Excerpt:         How periodontal probe markings differ, which probe suits charting or screening, and what to check when buying.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     periodontal probes
+Keyphrase synonyms:  perio probe, Williams probe, UNC 15 probe, WHO probe
+SEO title:           Periodontal Probes Compared: Williams, UNC 15 and WHO   (53 characters)
+Slug:                periodontal-probes-compared
+Meta description:    Periodontal probes compared: Williams, UNC 15, Marquis, Michigan O, WHO (CPI) and Nabers furcation probes, their markings, tips and uses.   (137 characters)
+
+FEATURED IMAGE
+--------------
+File:        periodontal-probes-compared.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a dental mirror and probe, illustrating the Gami Surgical guide to periodontal probes
+Title:       Periodontal Probes
+Caption:     Periodontal Probes. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Periodontal Probes Compared: Williams, UNC 15, WHO and More".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).
