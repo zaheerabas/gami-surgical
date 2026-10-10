@@ -1,0 +1,30 @@
+ARTICLE 10: Tweezers Guide: Slant, Pointed, Flat and Lash Tweezers Explained
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Tweezers Guide: Slant, Pointed, Flat and Lash Tweezers Explained
+Slug (URL):      types-of-tweezers
+Category:        Beauty Instruments
+Tags:            tweezers, eyebrow tweezers, eyelash extension tweezers, beauty tools, salon equipment
+Excerpt:         Which tweezers for which job? The common tip shapes for eyebrows, ingrown hairs, splinters and eyelash extensions, plus how to check quality and keep tips aligned.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     types of tweezers
+Keyphrase synonyms:  eyebrow tweezers, eyelash extension tweezers, professional tweezers
+SEO title:           Types of Tweezers: Slant, Pointed, Flat and Lash   (48 characters)
+Slug:                types-of-tweezers
+Meta description:    The main types of tweezers explained: slant, pointed, flat and round tips for brows, isolation and volume tweezers for lashes, and how to check quality.   (152 characters)
+
+FEATURED IMAGE
+--------------
+File:        types-of-tweezers.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of slant tweezers and an eyebrow, illustrating the Gami Surgical guide to types of tweezers
+Title:       Types of Tweezers
+Caption:     Types of Tweezers. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Tweezers Guide: Slant, Pointed, Flat and Lash Tweezers Explained".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

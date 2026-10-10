@@ -16,7 +16,7 @@
 $gami_variant = isset( $args['variant'] ) ? $args['variant'] : 'card';
 $gami_cat     = gami_primary_category();
 $gami_large   = in_array( $gami_variant, array( 'feature', 'lead' ), true );
-$gami_size    = $gami_large ? 'gami-wide' : ( 'compact' === $gami_variant ? 'thumbnail' : 'gami-card' );
+$gami_size    = $gami_large ? 'gami-wide' : 'gami-card-wide';
 $gami_heading = 'h3';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-card post-card--' . $gami_variant ); ?>>

@@ -39,6 +39,7 @@ function gami_setup() {
 
 	add_image_size( 'gami-card', 640, 640, true );
 	add_image_size( 'gami-wide', 1400, 700, true );
+	add_image_size( 'gami-card-wide', 800, 500, true ); // blog cards (16:10)
 
 	register_nav_menus(
 		array(

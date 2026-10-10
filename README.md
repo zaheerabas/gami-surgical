@@ -32,32 +32,8 @@ The repo is set by `GAMI_GITHUB_REPO` in `inc/github-updater.php`.
   (reuses an existing page with the slug `blog`, otherwise creates one).
 - Blog page sections and article extras can be switched on and off in
   **Appearance → Customize → Gami Surgical → Blog and articles**.
-- Articles live in `articles/` as `.html` files. They are not part of the
-  theme zip; each release also carries `gami-surgical-articles.zip`.
-- In WordPress: **Posts → Upload Articles**, choose the `.html` files,
-  pick *Draft* or *Publish*. Uploading the same file again updates the post.
-- After upload, edit the post normally or click **Edit with Elementor**,
-  and add a featured image.
-
-### Writing a new article file
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Article title</title>
-<meta name="description" content="One or two sentences; used as the excerpt.">
-<meta name="slug" content="article-url-slug">
-<meta name="category" content="Instrument Guides">
-<meta name="tags" content="tag one, tag two">
-</head>
-<body>
-<article>
-<h1>Article title</h1>
-<p>Text…</p>
-<div class="gs-callout"><p class="gs-callout__title">In short</p><p>Highlighted box.</p></div>
-<div class="gs-checklist"><p class="gs-checklist__title">Checklist</p><ul><li>Ticked item</li></ul></div>
-</article>
-</body>
-</html>
-```
+- Articles live in `articles/`, one folder per article: `article.html` (the
+  text only), a 1600 x 900 featured image and `seo.txt` (post title, slug,
+  category, tags, excerpt, Yoast fields, image alt text). See
+  `articles/README.txt` for publishing steps. Each release carries them as
+  `gami-surgical-articles.zip`.

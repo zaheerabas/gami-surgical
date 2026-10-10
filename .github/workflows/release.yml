@@ -46,7 +46,7 @@ jobs:
           git archive HEAD | tar -x -C dist/gami-surgical
           rm -rf dist/gami-surgical/.github dist/gami-surgical/.gitignore dist/gami-surgical/README.md dist/gami-surgical/articles
           (cd dist && zip -qr gami-surgical.zip gami-surgical)
-          if [ -d articles ]; then zip -qrj dist/gami-surgical-articles.zip articles; fi
+          if [ -d articles ]; then (cd articles && zip -qr ../dist/gami-surgical-articles.zip .); fi
 
       - name: Publish release
         if: steps.check.outputs.exists != 'true'

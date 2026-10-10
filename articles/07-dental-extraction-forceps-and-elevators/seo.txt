@@ -1,0 +1,30 @@
+ARTICLE 07: Dental Extraction Forceps and Elevators: A Guide for Clinics
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Dental Extraction Forceps and Elevators: A Guide for Clinics
+Slug (URL):      dental-extraction-forceps-and-elevators
+Category:        Dental Instruments
+Tags:            dental forceps, extraction, elevators, luxators, dental clinic, buying guide
+Excerpt:         Upper and lower extraction forceps, universal patterns, pattern numbers, elevators and luxators: how they differ, what each is for, and what to specify when ordering.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     dental extraction forceps
+Keyphrase synonyms:  extraction forceps, dental forceps, dental elevators
+SEO title:           Dental Extraction Forceps and Elevators: A Clinic Guide   (55 characters)
+Slug:                dental-extraction-forceps-and-elevators
+Meta description:    Dental extraction forceps and elevators explained: upper and lower patterns, American and English numbers, universal forceps, elevators and luxators.   (149 characters)
+
+FEATURED IMAGE
+--------------
+File:        dental-extraction-forceps-and-elevators.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of dental extraction forceps holding a tooth, illustrating the Gami Surgical guide to dental extraction forceps
+Title:       Dental Extraction Forceps and Elevators
+Caption:     Dental Extraction Forceps and Elevators. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Dental Extraction Forceps and Elevators: A Guide for Clinics".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).

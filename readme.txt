@@ -244,6 +244,13 @@ loaded from Google Fonts.
 
 == Changelog ==
 
+= 1.16.2 =
+* Blog cards use a wide 16:10 image size, so featured images (1600 x 900)
+  show in full instead of being cut to a square.
+* No double gold corner when an article has a featured image.
+* articles/: each article is now a folder with the article text only, a
+  featured image and an SEO sheet (title, slug, Yoast fields, alt text).
+
 = 1.16.1 =
 * Theme updates show up more reliably: the update is offered as soon as a
   new GitHub release exists (no waiting for WordPress's twice-daily check),

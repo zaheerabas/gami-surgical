@@ -1,0 +1,30 @@
+ARTICLE 08: Dental Examination and Periodontal Instruments: Mirrors, Probes, Scalers and Curettes
+======================================================================
+
+WORDPRESS POST
+--------------
+Post title:      Dental Examination and Periodontal Instruments: Mirrors, Probes, Scalers and Curettes
+Slug (URL):      dental-examination-and-periodontal-instruments
+Category:        Dental Instruments
+Tags:            dental instruments, periodontal probe, scalers, Gracey curettes, dental hygiene
+Excerpt:         A guide to the everyday hand instruments of a dental clinic: mouth mirrors, explorers, periodontal probes, sickle scalers, universal and Gracey curettes, and how to keep them sharp.
+
+YOAST SEO (box under the editor)
+--------------------------------
+Focus keyphrase:     periodontal instruments
+Keyphrase synonyms:  dental examination instruments, dental hygiene instruments, Gracey curettes
+SEO title:           Periodontal Instruments: Probes, Scalers and Curettes   (53 characters)
+Slug:                dental-examination-and-periodontal-instruments
+Meta description:    A guide to dental examination and periodontal instruments: mirrors, explorers, probes, sickle scalers, universal and Gracey curettes, and sharpening.   (149 characters)
+
+FEATURED IMAGE
+--------------
+File:        dental-examination-and-periodontal-instruments.jpg   (1600 x 900 px, JPG)
+Alt text:    Line drawing of a dental mirror and periodontal probe, illustrating the Gami Surgical guide to periodontal instruments
+Title:       Dental Examination and Periodontal Instruments
+Caption:     Dental Examination and Periodontal Instruments. Gami Surgical, Sialkot, Pakistan.
+Description: Featured image for the article "Dental Examination and Periodontal Instruments: Mirrors, Probes, Scalers and Curettes".
+
+ARTICLE TEXT
+------------
+article.html in this folder (the article only, without the title).
