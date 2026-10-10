@@ -1,11 +1,14 @@
 name: Release theme
 
-# Push a tag like v1.14.0 and this builds gami-surgical.zip and publishes a
-# GitHub release with it. Sites running the theme then see "Update now".
+# When the "Version:" in style.css is new (push to main), or when a tag like
+# v1.15.0 is pushed, build gami-surgical.zip and publish a GitHub release
+# with it. Sites running the theme then see "Update now".
 
 on:
   push:
+    branches: [main]
     tags: ['v*']
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,16 +19,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check tag matches style.css Version
+      - name: Read theme version from style.css
         id: version
         run: |
           VERSION=$(grep -m1 -E '^[[:space:]]*Version:' style.css | sed -E 's/^[[:space:]]*Version:[[:space:]]*//' | tr -d '\r[:space:]')
-          if [ "v$VERSION" != "$GITHUB_REF_NAME" ]; then
+          if [ -z "$VERSION" ]; then echo "::error::No Version: line in style.css"; exit 1; fi
+          if [[ "$GITHUB_REF" == refs/tags/* && "$GITHUB_REF_NAME" != "v$VERSION" ]]; then
             echo "::error::Tag $GITHUB_REF_NAME does not match style.css Version $VERSION"; exit 1
           fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
+      - name: Skip if this version is already released
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "v${{ steps.version.outputs.version }}" >/dev/null 2>&1; then
+            echo "Release v${{ steps.version.outputs.version }} already exists, nothing to do."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build gami-surgical.zip
+        if: steps.check.outputs.exists != 'true'
         run: |
           mkdir -p dist/gami-surgical
           git archive HEAD | tar -x -C dist/gami-surgical
@@ -33,10 +48,13 @@ jobs:
           (cd dist && zip -qr gami-surgical.zip gami-surgical)
 
       - name: Publish release
+        if: steps.check.outputs.exists != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
         run: |
-          gh release create "$GITHUB_REF_NAME" dist/gami-surgical.zip \
-            --title "Gami Surgical $GITHUB_REF_NAME" \
+          gh release create "v$VERSION" dist/gami-surgical.zip \
+            --target "$GITHUB_SHA" \
+            --title "Gami Surgical v$VERSION" \
             --generate-notes \
             --latest

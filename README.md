@@ -11,15 +11,15 @@ than the installed version. The repo must be **public**.
 
 1. Change the theme files.
 2. Raise `Version:` in `style.css` (e.g. `1.14.0` → `1.15.0`).
-3. Publish a release, either way:
-   - **Automatic:** commit, then push a matching tag:
-     `git tag v1.15.0 && git push origin main v1.15.0`.
-     The *Release theme* action builds `gami-surgical.zip` and publishes the release.
-   - **By hand:** GitHub → Releases → *Draft a new release* → tag `v1.15.0`,
-     attach your zip (name it `gami-surgical.zip`, with a `gami-surgical/`
-     folder inside containing `style.css`), write the changelog, *Publish*.
+3. Commit and push to `main`. The *Release theme* action sees the new
+   version, builds `gami-surgical.zip` and publishes release `v1.15.0`.
+   (Pushes that don't change the version publish nothing.)
 
-The tag number must be higher than the installed `Version:`, and must match
+   Or by hand: GitHub → Releases → *Draft a new release* → tag `v1.15.0`,
+   attach your zip (name it `gami-surgical.zip`, with a `gami-surgical/`
+   folder inside containing `style.css`), write the changelog, *Publish*.
+
+The release number must be higher than the installed `Version:`, and must match
 the `Version:` inside the zip, otherwise WordPress keeps offering the update.
 
 To see an update right away: Dashboard → Updates → **Check again**.
