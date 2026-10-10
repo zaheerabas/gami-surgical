@@ -39,13 +39,14 @@ jobs:
             echo "exists=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Build gami-surgical.zip
+      - name: Build gami-surgical.zip and the articles zip
         if: steps.check.outputs.exists != 'true'
         run: |
           mkdir -p dist/gami-surgical
           git archive HEAD | tar -x -C dist/gami-surgical
-          rm -rf dist/gami-surgical/.github dist/gami-surgical/.gitignore dist/gami-surgical/README.md
+          rm -rf dist/gami-surgical/.github dist/gami-surgical/.gitignore dist/gami-surgical/README.md dist/gami-surgical/articles
           (cd dist && zip -qr gami-surgical.zip gami-surgical)
+          if [ -d articles ]; then zip -qrj dist/gami-surgical-articles.zip articles; fi
 
       - name: Publish release
         if: steps.check.outputs.exists != 'true'
@@ -53,7 +54,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          gh release create "v$VERSION" dist/gami-surgical.zip \
+          gh release create "v$VERSION" dist/gami-surgical.zip $(ls dist/gami-surgical-articles.zip 2>/dev/null) \
             --target "$GITHUB_SHA" \
             --title "Gami Surgical v$VERSION" \
             --generate-notes \

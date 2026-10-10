@@ -1,6 +1,6 @@
 <?php
 /**
- * Archive template.
+ * Archive template (categories, tags, authors, dates).
  *
  * @package Gami_Surgical
  */
@@ -8,30 +8,15 @@
 get_header();
 
 if ( ! gami_elementor_location( 'archive' ) ) :
+	gami_blog_hero( wp_strip_all_tags( get_the_archive_title() ), get_the_archive_description() );
 	?>
-	<main id="primary" class="site-main container layout-with-sidebar">
-		<div class="layout-main">
-			<?php gami_breadcrumbs(); ?>
-			<header class="page-header">
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
-			</header>
-
-			<?php if ( have_posts() ) : ?>
-				<div class="post-list">
-					<?php
-					while ( have_posts() ) :
-						the_post();
-						get_template_part( 'template-parts/content', get_post_type() );
-					endwhile;
-					?>
-				</div>
-				<?php gami_pagination(); ?>
-			<?php else : ?>
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
-			<?php endif; ?>
-		</div>
-		<?php get_sidebar(); ?>
+	<main id="primary" class="site-main site-main--blog container">
+		<?php
+		if ( is_category() ) {
+			gami_blog_category_nav();
+		}
+		gami_blog_listing();
+		?>
 	</main>
 	<?php
 endif;

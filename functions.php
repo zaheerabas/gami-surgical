@@ -29,6 +29,8 @@ $gami_includes = array(
 	'elementor',
 	'yoast',
 	'admin-notices',
+	'blog',
+	'article-upload',
 	'github-updater',
 );
 

@@ -25,3 +25,37 @@ the `Version:` inside the zip, otherwise WordPress keeps offering the update.
 To see an update right away: Dashboard → Updates → **Check again**.
 
 The repo is set by `GAMI_GITHUB_REPO` in `inc/github-updater.php`.
+
+## Blog and articles
+
+- When the theme is installed or updated it sets up the **Blog** page
+  (reuses an existing page with the slug `blog`, otherwise creates one).
+- Articles live in `articles/` as `.html` files. They are not part of the
+  theme zip; each release also carries `gami-surgical-articles.zip`.
+- In WordPress: **Posts → Upload Articles**, choose the `.html` files,
+  pick *Draft* or *Publish*. Uploading the same file again updates the post.
+- After upload, edit the post normally or click **Edit with Elementor**,
+  and add a featured image.
+
+### Writing a new article file
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Article title</title>
+<meta name="description" content="One or two sentences; used as the excerpt.">
+<meta name="slug" content="article-url-slug">
+<meta name="category" content="Instrument Guides">
+<meta name="tags" content="tag one, tag two">
+</head>
+<body>
+<article>
+<h1>Article title</h1>
+<p>Text…</p>
+<div class="gs-callout"><p class="gs-callout__title">In short</p><p>Highlighted box.</p></div>
+<div class="gs-checklist"><p class="gs-checklist__title">Checklist</p><ul><li>Ticked item</li></ul></div>
+</article>
+</body>
+</html>
+```

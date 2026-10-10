@@ -244,6 +244,15 @@ loaded from Google Fonts.
 
 == Changelog ==
 
+= 1.15.0 =
+* Blog: the theme creates the "Blog" page when it is installed or updated
+  (an existing page with the slug "blog" is reused, not duplicated).
+* New blog design: banner, category links, card grid with a featured first
+  post, article page with reading time, share links, quote box and related
+  articles. Styles in assets/css/blog.css.
+* Posts > Upload Articles: upload article .html files to create or update
+  posts, which can then be edited in the block editor or with Elementor.
+
 = 1.14.0 =
 * One-click theme updates from GitHub Releases: when a newer release is
   published, Appearance > Themes shows the normal "Update now" button.
