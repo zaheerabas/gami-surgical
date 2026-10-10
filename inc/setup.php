@@ -107,7 +107,7 @@ function gami_body_classes( $classes ) {
 	if ( gami_is_elementor_page() ) {
 		$classes[] = 'is-elementor-page';
 	}
-	if ( ! is_active_sidebar( 'sidebar-blog' ) ) {
+	if ( ! is_active_sidebar( 'sidebar-blog' ) && ! is_singular( 'post' ) ) {
 		$classes[] = 'no-sidebar';
 	}
 	return $classes;

@@ -244,6 +244,20 @@ loaded from Google Fonts.
 
 == Changelog ==
 
+= 1.16.0 =
+* Blog page in sections, each with its own layout: banner with article
+  search and counts, Latest (lead story + list), Browse by topic (tiles),
+  a row per category (alternating cards and list), question banner, and
+  All articles (dated list with pagination).
+* Article page: sidebar with a pinned "On this page" contents list that
+  follows your reading, About box with quote and WhatsApp links, topics
+  and latest articles; reading progress bar; author box; copy-link button.
+* Article typography: headings with link anchors, gold-underlined links
+  (outside links marked), styled bullet and numbered lists, tables with a
+  navy header that scroll on phones, quotes, code, captions.
+* Customizer > Gami Surgical > Blog and articles: switch each section on or
+  off and edit the banner and question texts.
+
 = 1.15.0 =
 * Blog: the theme creates the "Blog" page when it is installed or updated
   (an existing page with the slug "blog" is reused, not duplicated).

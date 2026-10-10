@@ -68,6 +68,22 @@ function gami_customizer_defaults() {
 		'header_account'       => true,
 		'header_cart'          => true,
 
+		// Blog.
+		'blog_eyebrow'         => 'Gami Surgical Journal',
+		'blog_intro'           => 'Guides on choosing, using and caring for surgical, dental and beauty instruments, from the makers in Sialkot.',
+		'blog_search'          => true,
+		'blog_latest'          => true,
+		'blog_topics'          => true,
+		'blog_category_rows'   => true,
+		'blog_cta'             => true,
+		'blog_cta_title'       => 'Have a question about an instrument?',
+		'blog_cta_text'        => 'Ask our team about materials, finishes, sizes or care. We usually reply within one working day.',
+		'article_toc'          => true,
+		'article_progress'     => true,
+		'article_author_box'   => true,
+		'article_about'        => true,
+		'article_about_text'   => 'Gami Surgical manufactures surgical, dental and beauty instruments in Sialkot, Pakistan, and ships worldwide.',
+
 		// Footer.
 		'footer_width'         => 'contained',
 		'footer_columns'       => 4,
@@ -252,6 +268,7 @@ function gami_customize_register( $c ) {
 		'gami_contact' => __( 'Contact details', 'gami-surgical' ),
 	);
 	$sections['gami_inquiry'] = __( 'Inquiries', 'gami-surgical' );
+	$sections['gami_blog']    = __( 'Blog and articles', 'gami-surgical' );
 	if ( gami_wc_active() ) {
 		$sections['gami_shoppage'] = __( 'Shop page', 'gami-surgical' );
 	}
@@ -284,6 +301,22 @@ function gami_customize_register( $c ) {
 	gami_add_option( $c, 'container_width', 'number', 'gami_brand', __( 'Site width (px)', 'gami-surgical' ), array_merge( $px( 960, 1920, 10 ), array( 'description' => __( 'Maximum width of the content on every page, header and footer included. Default 1400.', 'gami-surgical' ) ) ) );
 	gami_add_option( $c, 'animations', 'checkbox', 'gami_brand', __( 'Animations (content fades in on scroll, hover effects)', 'gami-surgical' ), array( 'description' => __( 'Visitors who turn off motion in their device settings never see animations.', 'gami-surgical' ) ) );
 	gami_add_option( $c, 'certifications', 'text', 'gami_brand', __( 'Certifications line', 'gami-surgical' ), array( 'description' => __( 'Shown in the footer. Only list certifications you hold, for example ISO 13485, CE. Hidden when empty.', 'gami-surgical' ) ) );
+
+	// Blog.
+	gami_add_option( $c, 'blog_eyebrow', 'text', 'gami_blog', __( 'Blog page: small heading above the title', 'gami-surgical' ) );
+	gami_add_option( $c, 'blog_intro', 'textarea', 'gami_blog', __( 'Blog page: introduction', 'gami-surgical' ), array( 'description' => __( 'Used when the Blog page has no excerpt.', 'gami-surgical' ) ) );
+	gami_add_option( $c, 'blog_search', 'checkbox', 'gami_blog', __( 'Show article search in the banner', 'gami-surgical' ) );
+	gami_add_option( $c, 'blog_latest', 'checkbox', 'gami_blog', __( 'Section: Latest articles', 'gami-surgical' ) );
+	gami_add_option( $c, 'blog_topics', 'checkbox', 'gami_blog', __( 'Section: Browse by topic', 'gami-surgical' ) );
+	gami_add_option( $c, 'blog_category_rows', 'checkbox', 'gami_blog', __( 'Section: one row per category', 'gami-surgical' ), array( 'description' => __( 'Shown when the blog has two or more categories.', 'gami-surgical' ) ) );
+	gami_add_option( $c, 'blog_cta', 'checkbox', 'gami_blog', __( 'Section: question banner', 'gami-surgical' ) );
+	gami_add_option( $c, 'blog_cta_title', 'text', 'gami_blog', __( 'Question banner: title', 'gami-surgical' ) );
+	gami_add_option( $c, 'blog_cta_text', 'textarea', 'gami_blog', __( 'Question banner: text', 'gami-surgical' ) );
+	gami_add_option( $c, 'article_toc', 'checkbox', 'gami_blog', __( 'Articles: "On this page" contents', 'gami-surgical' ) );
+	gami_add_option( $c, 'article_progress', 'checkbox', 'gami_blog', __( 'Articles: reading progress bar', 'gami-surgical' ) );
+	gami_add_option( $c, 'article_author_box', 'checkbox', 'gami_blog', __( 'Articles: author box', 'gami-surgical' ) );
+	gami_add_option( $c, 'article_about', 'checkbox', 'gami_blog', __( 'Articles: About box in the sidebar', 'gami-surgical' ) );
+	gami_add_option( $c, 'article_about_text', 'textarea', 'gami_blog', __( 'About box text', 'gami-surgical' ) );
 
 	// Top bar.
 	gami_add_option( $c, 'topbar_show', 'checkbox', 'gami_topbar', __( 'Show the top bar', 'gami-surgical' ) );

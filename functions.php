@@ -30,6 +30,7 @@ $gami_includes = array(
 	'yoast',
 	'admin-notices',
 	'blog',
+	'blog-article',
 	'article-upload',
 	'github-updater',
 );

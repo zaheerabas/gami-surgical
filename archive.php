@@ -12,9 +12,7 @@ if ( ! gami_elementor_location( 'archive' ) ) :
 	?>
 	<main id="primary" class="site-main site-main--blog container">
 		<?php
-		if ( is_category() ) {
-			gami_blog_category_nav();
-		}
+		gami_blog_category_nav();
 		gami_blog_listing();
 		?>
 	</main>

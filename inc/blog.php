@@ -88,12 +88,25 @@ function gami_is_blog() {
 		|| is_page_template( GAMI_BLOG_TEMPLATE );
 }
 
-function gami_blog_styles() {
-	if ( gami_is_blog() ) {
-		wp_enqueue_style( 'gami-blog', GAMI_URI . '/assets/css/blog.css', array( 'gami-main' ), GAMI_VERSION );
+function gami_blog_assets() {
+	if ( ! gami_is_blog() ) {
+		return;
+	}
+	wp_enqueue_style( 'gami-blog', GAMI_URI . '/assets/css/blog.css', array( 'gami-main' ), GAMI_VERSION );
+	if ( is_singular( 'post' ) ) {
+		wp_enqueue_script(
+			'gami-article',
+			GAMI_URI . '/assets/js/article.js',
+			array(),
+			GAMI_VERSION,
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			)
+		);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gami_blog_styles' );
+add_action( 'wp_enqueue_scripts', 'gami_blog_assets' );
 
 /**
  * Minutes to read a post, at 200 words a minute.
@@ -135,18 +148,97 @@ function gami_blog_url() {
 	return $page_id ? get_permalink( $page_id ) : home_url( '/' );
 }
 
+
+/**
+ * Current listing page number (works on the posts page and on a page template).
+ */
+function gami_blog_paged() {
+	return max( 1, (int) get_query_var( 'paged' ), (int) get_query_var( 'page' ) );
+}
+
+/**
+ * Categories that have posts, biggest first, without "Uncategorized".
+ *
+ * @return WP_Term[]
+ */
+function gami_blog_categories() {
+	$cats = get_categories(
+		array(
+			'hide_empty' => true,
+			'orderby'    => 'count',
+			'order'      => 'DESC',
+		)
+	);
+	return array_values(
+		array_filter(
+			$cats,
+			function ( $cat ) {
+				return 'uncategorized' !== $cat->slug;
+			}
+		)
+	);
+}
+
+/**
+ * Section heading with an optional "View all" link.
+ */
+function gami_blog_section_head( $title, $link = '', $link_text = '', $id = '' ) {
+	echo '<header class="blog-section__head">';
+	printf( '<h2 class="blog-section__title"%2$s>%1$s</h2>', esc_html( $title ), $id ? ' id="' . esc_attr( $id ) . '"' : '' );
+	if ( $link ) {
+		printf(
+			'<a class="blog-section__more" href="%1$s">%2$s <span aria-hidden="true">→</span></a>',
+			esc_url( $link ),
+			esc_html( $link_text ? $link_text : __( 'View all', 'gami-surgical' ) )
+		);
+	}
+	echo '</header>';
+}
+
 /**
  * Banner at the top of blog listings.
+ *
+ * @param string $title Heading.
+ * @param string $text  Introduction (HTML allowed).
+ * @param bool   $full  Add the search box and counts (blog home only).
  */
-function gami_blog_hero( $title, $text = '' ) {
+function gami_blog_hero( $title, $text = '', $full = false ) {
+	$posts = (int) wp_count_posts()->publish;
+	$cats  = count( gami_blog_categories() );
 	?>
-	<header class="blog-hero">
-		<div class="container">
-			<?php gami_breadcrumbs(); ?>
-			<p class="blog-hero__eyebrow"><?php esc_html_e( 'Gami Surgical Journal', 'gami-surgical' ); ?></p>
-			<h1 class="blog-hero__title"><?php echo esc_html( $title ); ?></h1>
-			<?php if ( $text ) : ?>
-				<div class="blog-hero__text"><?php echo wp_kses_post( $text ); ?></div>
+	<header class="blog-hero<?php echo $full ? ' blog-hero--home' : ''; ?>">
+		<div class="container blog-hero__inner">
+			<div class="blog-hero__main">
+				<?php gami_breadcrumbs(); ?>
+				<?php if ( gami_option( 'blog_eyebrow' ) ) : ?>
+					<p class="blog-hero__eyebrow"><?php echo esc_html( gami_option( 'blog_eyebrow' ) ); ?></p>
+				<?php endif; ?>
+				<h1 class="blog-hero__title"><?php echo esc_html( $title ); ?></h1>
+				<?php if ( $text ) : ?>
+					<div class="blog-hero__text"><?php echo wp_kses_post( wpautop( $text ) ); ?></div>
+				<?php endif; ?>
+			</div>
+			<?php if ( $full && ( gami_option( 'blog_search' ) || $posts ) ) : ?>
+				<div class="blog-hero__side">
+					<?php if ( gami_option( 'blog_search' ) ) : ?>
+						<form class="blog-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<label for="blog-search-field"><?php esc_html_e( 'Search articles', 'gami-surgical' ); ?></label>
+							<div class="blog-search__row">
+								<input type="search" id="blog-search-field" name="s" placeholder="<?php esc_attr_e( 'Sterilization, scissors, steel…', 'gami-surgical' ); ?>">
+								<input type="hidden" name="post_type" value="post">
+								<button type="submit"><?php esc_html_e( 'Search', 'gami-surgical' ); ?></button>
+							</div>
+						</form>
+					<?php endif; ?>
+					<?php if ( $posts ) : ?>
+						<dl class="blog-stats">
+							<div><dt><?php esc_html_e( 'Articles', 'gami-surgical' ); ?></dt><dd><?php echo esc_html( number_format_i18n( $posts ) ); ?></dd></div>
+							<?php if ( $cats ) : ?>
+								<div><dt><?php echo esc_html( _n( 'Topic', 'Topics', $cats, 'gami-surgical' ) ); ?></dt><dd><?php echo esc_html( number_format_i18n( $cats ) ); ?></dd></div>
+							<?php endif; ?>
+						</dl>
+					<?php endif; ?>
+				</div>
 			<?php endif; ?>
 		</div>
 	</header>
@@ -154,21 +246,10 @@ function gami_blog_hero( $title, $text = '' ) {
 }
 
 /**
- * Category links above the listing.
+ * Category links above archive listings.
  */
 function gami_blog_category_nav() {
-	$cats = get_categories(
-		array(
-			'hide_empty' => true,
-			'exclude'    => array( (int) get_option( 'default_category' ) ),
-		)
-	);
-	$cats = array_filter(
-		$cats,
-		function ( $cat ) {
-			return 'uncategorized' !== $cat->slug;
-		}
-	);
+	$cats = gami_blog_categories();
 	if ( ! $cats ) {
 		return;
 	}
@@ -182,52 +263,30 @@ function gami_blog_category_nav() {
 	);
 	foreach ( $cats as $cat ) {
 		printf(
-			'<li><a href="%1$s"%2$s>%3$s</a></li>',
+			'<li><a href="%1$s"%2$s>%3$s <span>%4$s</span></a></li>',
 			esc_url( get_category_link( $cat ) ),
 			$current === $cat->term_id ? ' aria-current="page"' : '',
-			esc_html( $cat->name )
+			esc_html( $cat->name ),
+			esc_html( number_format_i18n( $cat->count ) )
 		);
 	}
 	echo '</ul></nav>';
 }
 
 /**
- * Card grid of posts with pagination. The first post on page one is shown large.
- *
- * @param WP_Query|null $query Posts to list; defaults to the main query.
+ * Loop a query through the card template.
  */
-function gami_blog_listing( $query = null ) {
-	global $wp_query;
-	$query = $query ? $query : $wp_query;
-	$paged = max( 1, (int) get_query_var( 'paged' ), (int) get_query_var( 'page' ) );
-
-	if ( ! $query->have_posts() ) {
-		echo '<section class="no-results blog-empty"><h2>' . esc_html__( 'No articles yet', 'gami-surgical' ) . '</h2>';
-		if ( current_user_can( 'edit_posts' ) ) {
-			printf(
-				'<p><a class="button button--primary" href="%1$s">%2$s</a> <a class="button button--ghost" href="%3$s">%4$s</a></p>',
-				esc_url( admin_url( 'edit.php?page=gami-upload-articles' ) ),
-				esc_html__( 'Upload articles', 'gami-surgical' ),
-				esc_url( admin_url( 'post-new.php' ) ),
-				esc_html__( 'Write a post', 'gami-surgical' )
-			);
-		} else {
-			echo '<p>' . esc_html__( 'New guides are on the way. Check back soon.', 'gami-surgical' ) . '</p>';
-		}
-		echo '</section>';
-		return;
-	}
-
-	echo '<div class="blog-grid">';
+function gami_blog_cards( $query, $variant = 'card', $first_variant = '' ) {
 	$i = 0;
 	while ( $query->have_posts() ) {
 		$query->the_post();
-		get_template_part( 'template-parts/content', 'card', array( 'featured' => 0 === $i && 1 === $paged ) );
+		get_template_part( 'template-parts/content', 'card', array( 'variant' => ( 0 === $i && $first_variant ) ? $first_variant : $variant ) );
 		++$i;
 	}
-	echo '</div>';
 	wp_reset_postdata();
+}
 
+function gami_blog_pagination( $query, $paged ) {
 	$links = paginate_links(
 		array(
 			'total'     => (int) $query->max_num_pages,
@@ -242,79 +301,240 @@ function gami_blog_listing( $query = null ) {
 	}
 }
 
-/**
- * Up to three posts from the same category.
- */
-function gami_related_posts( $post_id = null ) {
-	$post_id = $post_id ? $post_id : get_the_ID();
-	$cat     = gami_primary_category( $post_id );
-	$args    = array(
-		'post_type'           => 'post',
-		'posts_per_page'      => 3,
-		'post__not_in'        => array( $post_id ),
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-	);
-	if ( $cat ) {
-		$args['cat'] = $cat->term_id;
+function gami_blog_empty() {
+	echo '<section class="no-results blog-empty"><h2>' . esc_html__( 'No articles yet', 'gami-surgical' ) . '</h2>';
+	if ( current_user_can( 'edit_posts' ) ) {
+		printf(
+			'<p><a class="button button--primary" href="%1$s">%2$s</a> <a class="button button--ghost" href="%3$s">%4$s</a></p>',
+			esc_url( admin_url( 'edit.php?page=gami-upload-articles' ) ),
+			esc_html__( 'Upload articles', 'gami-surgical' ),
+			esc_url( admin_url( 'post-new.php' ) ),
+			esc_html__( 'Write a post', 'gami-surgical' )
+		);
+	} else {
+		echo '<p>' . esc_html__( 'New guides are on the way. Check back soon.', 'gami-surgical' ) . '</p>';
 	}
-	$related = new WP_Query( $args );
-	if ( ! $related->have_posts() ) {
+	echo '</section>';
+}
+
+/**
+ * Card grid with pagination, for category, tag, author and date archives.
+ *
+ * @param WP_Query|null $query Posts to list; defaults to the main query.
+ */
+function gami_blog_listing( $query = null ) {
+	global $wp_query;
+	$query = $query ? $query : $wp_query;
+	$paged = gami_blog_paged();
+
+	if ( ! $query->have_posts() ) {
+		gami_blog_empty();
 		return;
 	}
+
+	echo '<div class="blog-grid">';
+	gami_blog_cards( $query, 'card', 1 === $paged ? 'feature' : '' );
+	echo '</div>';
+	gami_blog_pagination( $query, $paged );
+}
+
+/* ---------- Blog home sections ---------- */
+
+/**
+ * Latest: one lead story beside a list of the next three.
+ *
+ * @return int[] IDs shown.
+ */
+function gami_blog_section_latest() {
+	$q = new WP_Query(
+		array(
+			'post_type'           => 'post',
+			'posts_per_page'      => 4,
+			'ignore_sticky_posts' => false,
+			'no_found_rows'       => true,
+		)
+	);
+	if ( ! $q->have_posts() ) {
+		return array();
+	}
+	$ids = wp_list_pluck( $q->posts, 'ID' );
 	?>
-	<section class="related-posts" aria-labelledby="related-title">
-		<h2 id="related-title" class="related-posts__title"><?php esc_html_e( 'Keep reading', 'gami-surgical' ); ?></h2>
-		<div class="blog-grid blog-grid--related">
+	<section class="blog-section blog-latest" aria-labelledby="blog-latest-title">
+		<?php gami_blog_section_head( __( 'Latest articles', 'gami-surgical' ), '', '', 'blog-latest-title' ); ?>
+		<div class="blog-latest__grid<?php echo 1 === count( $ids ) ? ' is-single' : ''; ?>">
 			<?php
-			while ( $related->have_posts() ) {
-				$related->the_post();
-				get_template_part( 'template-parts/content', 'card' );
+			$q->the_post();
+			get_template_part( 'template-parts/content', 'card', array( 'variant' => 'lead' ) );
+			if ( $q->have_posts() ) {
+				echo '<div class="blog-latest__list">';
+				while ( $q->have_posts() ) {
+					$q->the_post();
+					get_template_part( 'template-parts/content', 'card', array( 'variant' => 'compact' ) );
+				}
+				echo '</div>';
 			}
 			wp_reset_postdata();
 			?>
 		</div>
 	</section>
 	<?php
+	return $ids;
 }
 
 /**
- * Quote request box shown under each article.
+ * Browse by topic: one tile per category.
  */
-function gami_article_cta() {
+function gami_blog_section_topics() {
+	$cats = gami_blog_categories();
+	if ( ! $cats ) {
+		return;
+	}
 	?>
-	<aside class="article-cta">
-		<div>
-			<p class="article-cta__title"><?php esc_html_e( 'Need instruments made to this standard?', 'gami-surgical' ); ?></p>
-			<p class="article-cta__text"><?php esc_html_e( 'Gami Surgical manufactures surgical, dental and beauty instruments in Sialkot and ships worldwide. Send us your list for a quote.', 'gami-surgical' ); ?></p>
-		</div>
-		<a class="button button--primary" href="<?php echo esc_url( gami_quote_url() ); ?>"><?php esc_html_e( 'Request a quote', 'gami-surgical' ); ?></a>
-	</aside>
+	<section class="blog-section blog-topics" aria-labelledby="blog-topics-title">
+		<?php gami_blog_section_head( __( 'Browse by topic', 'gami-surgical' ), '', '', 'blog-topics-title' ); ?>
+		<ul class="topic-tiles">
+			<?php foreach ( $cats as $i => $cat ) : ?>
+				<li class="topic-tile<?php echo 0 === $i ? ' topic-tile--dark' : ''; ?>">
+					<a href="<?php echo esc_url( get_category_link( $cat ) ); ?>">
+						<span class="topic-tile__count">
+							<?php
+							/* translators: %s: number of articles */
+							echo esc_html( sprintf( _n( '%s article', '%s articles', $cat->count, 'gami-surgical' ), number_format_i18n( $cat->count ) ) );
+							?>
+						</span>
+						<span class="topic-tile__name"><?php echo esc_html( $cat->name ); ?></span>
+						<?php if ( $cat->description ) : ?>
+							<span class="topic-tile__text"><?php echo esc_html( wp_trim_words( $cat->description, 18 ) ); ?></span>
+						<?php endif; ?>
+						<span class="topic-tile__arrow" aria-hidden="true">→</span>
+					</a>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	</section>
 	<?php
 }
 
 /**
- * Share links (no third-party scripts).
+ * One row per category (up to four), alternating card and list layouts.
+ * Only when there are two or more categories; with one, it would repeat Latest.
  */
-function gami_share_links() {
-	$url   = rawurlencode( get_permalink() );
-	$title = rawurlencode( get_the_title() );
-	$links = array(
-		'LinkedIn' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . $url,
-		'Facebook' => 'https://www.facebook.com/sharer/sharer.php?u=' . $url,
-		'X'        => 'https://twitter.com/intent/tweet?url=' . $url . '&text=' . $title,
-		'WhatsApp' => 'https://wa.me/?text=' . $title . '%20' . $url,
-		'Email'    => 'mailto:?subject=' . $title . '&body=' . $url,
-	);
-	echo '<div class="share-links"><span class="share-links__label">' . esc_html__( 'Share', 'gami-surgical' ) . '</span><ul>';
-	foreach ( $links as $name => $href ) {
-		printf(
-			'<li><a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a></li>',
-			esc_url( $href ),
-			esc_html( $name )
-		);
+function gami_blog_section_category_rows() {
+	$cats = array_slice( gami_blog_categories(), 0, 4 );
+	if ( count( $cats ) < 2 ) {
+		return;
 	}
-	echo '</ul></div>';
+	foreach ( $cats as $i => $cat ) {
+		$list = 1 === $i % 2;
+		$q    = new WP_Query(
+			array(
+				'post_type'           => 'post',
+				'cat'                 => $cat->term_id,
+				'posts_per_page'      => $list ? 4 : 3,
+				'ignore_sticky_posts' => true,
+				'no_found_rows'       => true,
+			)
+		);
+		if ( ! $q->have_posts() ) {
+			continue;
+		}
+		$id = 'blog-cat-' . $cat->term_id;
+		echo '<section class="blog-section blog-catrow' . ( $list ? ' blog-catrow--list' : '' ) . '" aria-labelledby="' . esc_attr( $id ) . '">';
+		gami_blog_section_head( $cat->name, get_category_link( $cat ), __( 'All in this topic', 'gami-surgical' ), $id );
+		echo '<div class="' . ( $list ? 'blog-rowlist' : 'blog-grid blog-grid--3' ) . '">';
+		gami_blog_cards( $q, $list ? 'row' : 'card' );
+		echo '</div></section>';
+	}
+}
+
+/**
+ * Question banner between the sections.
+ */
+function gami_blog_section_cta() {
+	$wa = gami_whatsapp_url( __( 'Hello, I have a question about an instrument.', 'gami-surgical' ) );
+	?>
+	<section class="blog-ask">
+		<div class="blog-ask__text">
+			<h2 class="blog-ask__title"><?php echo esc_html( gami_option( 'blog_cta_title' ) ); ?></h2>
+			<p><?php echo esc_html( gami_option( 'blog_cta_text' ) ); ?></p>
+		</div>
+		<div class="blog-ask__actions">
+			<a class="button button--primary" href="<?php echo esc_url( gami_inquiry_page_url_safe() ); ?>"><?php esc_html_e( 'Ask our team', 'gami-surgical' ); ?></a>
+			<?php if ( $wa ) : ?>
+				<a class="button button--light" href="<?php echo esc_url( $wa ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Chat on WhatsApp', 'gami-surgical' ); ?></a>
+			<?php endif; ?>
+		</div>
+	</section>
+	<?php
+}
+
+/**
+ * All articles: compact dated list with pagination.
+ */
+function gami_blog_section_all( $query, $paged ) {
+	if ( ! $query->have_posts() ) {
+		return;
+	}
+	?>
+	<section class="blog-section blog-all" id="all-articles" aria-labelledby="blog-all-title">
+		<?php
+		gami_blog_section_head(
+			/* translators: %s: number of articles */
+			sprintf( __( 'All articles (%s)', 'gami-surgical' ), number_format_i18n( $query->found_posts ) ),
+			'',
+			'',
+			'blog-all-title'
+		);
+		?>
+		<div class="blog-index">
+			<?php gami_blog_cards( $query, 'index' ); ?>
+		</div>
+		<?php gami_blog_pagination( $query, $paged ); ?>
+	</section>
+	<?php
+}
+
+/**
+ * The whole Blog page.
+ *
+ * @param string   $title Page heading.
+ * @param string   $intro Introduction.
+ * @param WP_Query $query Paginated posts for "All articles".
+ */
+function gami_render_blog_home( $title, $intro, $query ) {
+	$paged = gami_blog_paged();
+	gami_blog_hero( $title, $intro, 1 === $paged );
+	echo '<main id="primary" class="site-main site-main--blog container">';
+
+	if ( ! $query->found_posts ) {
+		gami_blog_empty();
+	} elseif ( $paged > 1 ) {
+		gami_blog_section_all( $query, $paged );
+	} else {
+		$shown = gami_option( 'blog_latest' ) ? gami_blog_section_latest() : array();
+		if ( gami_option( 'blog_topics' ) ) {
+			gami_blog_section_topics();
+		}
+		if ( gami_option( 'blog_category_rows' ) ) {
+			gami_blog_section_category_rows();
+		}
+		if ( gami_option( 'blog_cta' ) ) {
+			gami_blog_section_cta();
+		}
+		// Skip the full list when Latest already shows every article.
+		if ( $query->found_posts > count( $shown ) ) {
+			gami_blog_section_all( $query, $paged );
+		}
+	}
+
+	echo '</main>';
+}
+
+/**
+ * Blog page introduction: the page excerpt, else the Customizer text.
+ */
+function gami_blog_intro( $page_id ) {
+	return $page_id && has_excerpt( $page_id ) ? get_the_excerpt( $page_id ) : gami_option( 'blog_intro' );
 }
 
 /**
