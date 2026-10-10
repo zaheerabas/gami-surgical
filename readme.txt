@@ -244,6 +244,15 @@ loaded from Google Fonts.
 
 == Changelog ==
 
+= 1.16.1 =
+* Theme updates show up more reliably: the update is offered as soon as a
+  new GitHub release exists (no waiting for WordPress's twice-daily check),
+  also on servers that cannot reach wordpress.org, and with a fallback when
+  GitHub's API limit is reached on shared hosting.
+* Appearance > Themes shows the installed version, the latest version on
+  GitHub and when it was checked, with a "Check now" link.
+* Release notes ("View version details") come from this changelog.
+
 = 1.16.0 =
 * Blog page in sections, each with its own layout: banner with article
   search and counts, Latest (lead story + list), Browse by topic (tiles),
