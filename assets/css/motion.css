@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Gami Surgical: motion (Customize > Gami Surgical > Brand colour > Animations)
+   Scroll reveals only apply when motion.js has added .gs-motion to <html>.
+   ========================================================================== */
+
+:root {
+	--gs-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+	--gs-lift: 0 18px 34px -20px rgba(19, 32, 46, 0.45);
+}
+
+/* ---------- Scroll reveal ---------- */
+.gs-motion .gs-reveal {
+	transition: opacity 0.7s var(--gs-ease-out), transform 0.7s var(--gs-ease-out);
+	transition-delay: var(--gs-delay, 0ms);
+}
+/* only the hidden state moves things, so hover effects stay free afterwards */
+.gs-motion .gs-reveal:not(.is-visible) { opacity: 0; transform: translate3d(0, 22px, 0); }
+/* after revealing, hand transitions back to the hover effects below */
+.gs-motion .gs-reveal.is-revealed { transition: opacity 0.2s, transform 0.25s var(--gs-ease-out), box-shadow 0.25s, border-color 0.2s; }
+.gs-motion .site-footer .gs-reveal:not(.is-visible) { transform: translate3d(0, 14px, 0); }
+
+/* ---------- Product cards ---------- */
+.woocommerce ul.products li.product { transition: transform 0.25s var(--gs-ease-out), box-shadow 0.25s, border-color 0.2s; overflow: hidden; }
+.woocommerce ul.products li.product a img { transition: transform 0.5s var(--gs-ease-out); }
+@media (hover: hover) {
+	.woocommerce ul.products li.product:hover { transform: translateY(-4px); box-shadow: var(--gs-lift); }
+	.woocommerce ul.products li.product:hover a img { transform: scale(1.05); }
+	.woocommerce ul.products.is-list li.product:hover { transform: translateY(-2px); }
+	.woocommerce ul.products.is-list li.product:hover a img { transform: scale(1.04); }
+}
+
+/* ---------- Buttons ---------- */
+.button,
+.woocommerce a.button,
+.woocommerce button.button,
+button[type="submit"],
+input[type="submit"] { transition: background-color 0.18s, color 0.18s, border-color 0.18s, transform 0.18s var(--gs-ease-out), box-shadow 0.2s; }
+@media (hover: hover) {
+	.button:hover,
+	.woocommerce a.button:hover,
+	.woocommerce button.button:hover,
+	button[type="submit"]:hover,
+	input[type="submit"]:hover { transform: translateY(-1px); }
+	.button--primary:hover,
+	.woocommerce a.button.button--primary:hover { box-shadow: 0 10px 20px -12px color-mix(in srgb, var(--gs-accent) 90%, transparent); }
+}
+.button:active,
+.woocommerce a.button:active,
+.woocommerce button.button:active,
+button[type="submit"]:active { transform: translateY(0) scale(0.98); }
+
+/* "Add to inquiry list": a small pop when added */
+.gs-add-list.is-added .gs-icon:nth-of-type(2) { animation: gs-pop 0.35s var(--gs-ease-out); }
+@keyframes gs-pop { 0% { transform: scale(0.4); } 70% { transform: scale(1.2); } 100% { transform: scale(1); } }
+.gs-inquiry-count:not([hidden]) { animation: gs-pop 0.35s var(--gs-ease-out); }
+
+/* ---------- Header ---------- */
+.site-header__nav .primary-menu > li > a:not(.button) { position: relative; }
+.site-header__nav .primary-menu > li > a:not(.button)::after {
+	content: "";
+	position: absolute;
+	left: 0; right: 0; bottom: 0;
+	height: 2px;
+	background: var(--gs-header-hover);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.28s var(--gs-ease-out);
+}
+@media (hover: hover) {
+	.site-header__nav .primary-menu > li:hover > a:not(.button)::after { transform: scaleX(1); }
+}
+.header-icon svg { transition: transform 0.2s var(--gs-ease-out); }
+@media (hover: hover) {
+	.header-icon:hover svg { transform: scale(1.12); }
+}
+.custom-logo-link img { transition: transform 0.3s var(--gs-ease-out), max-height 0.25s; }
+@media (hover: hover) {
+	.site-header .custom-logo-link:hover img { transform: scale(1.03); }
+}
+
+/* mega menu items slide in when the panel opens */
+@media (hover: hover) and (min-width: 1px) {
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li {
+		animation: gs-rise 0.4s var(--gs-ease-out) both;
+	}
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(2) { animation-delay: 30ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(3) { animation-delay: 60ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(4) { animation-delay: 90ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(5) { animation-delay: 120ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(6) { animation-delay: 150ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(7) { animation-delay: 170ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(8) { animation-delay: 190ms; }
+	html:not(.gs-nav-collapsed) .main-navigation li.mega-menu:hover > .sub-menu > li:nth-child(n+9) { animation-delay: 210ms; }
+}
+@keyframes gs-rise { from { opacity: 0; transform: translateY(8px); } }
+.mega-link__thumb,
+.mega-thumb { transition: transform 0.3s var(--gs-ease-out); }
+@media (hover: hover) {
+	.main-navigation .sub-menu a:hover .mega-link__thumb,
+	.main-navigation .sub-menu a:hover .mega-thumb { transform: scale(1.08); }
+}
+
+/* drawer menu items cascade in */
+.gs-nav-collapsed .main-navigation.is-open .primary-menu > li { animation: gs-slide-in 0.35s var(--gs-ease-out) both; }
+.gs-nav-collapsed .main-navigation.is-open .primary-menu > li:nth-child(2) { animation-delay: 40ms; }
+.gs-nav-collapsed .main-navigation.is-open .primary-menu > li:nth-child(3) { animation-delay: 80ms; }
+.gs-nav-collapsed .main-navigation.is-open .primary-menu > li:nth-child(4) { animation-delay: 120ms; }
+.gs-nav-collapsed .main-navigation.is-open .primary-menu > li:nth-child(5) { animation-delay: 160ms; }
+.gs-nav-collapsed .main-navigation.is-open .primary-menu > li:nth-child(n+6) { animation-delay: 200ms; }
+@keyframes gs-slide-in { from { opacity: 0; transform: translateX(16px); } }
+
+/* ---------- Cards and links ---------- */
+.cat-card__img,
+.subcat-card__img { transition: transform 0.45s var(--gs-ease-out); }
+@media (hover: hover) {
+	.cat-card:hover { transform: translateY(-3px); }
+	.cat-card:hover .cat-card__img,
+	.subcat-card:hover .subcat-card__img { transform: scale(1.07); }
+	.side-card { transition: box-shadow 0.25s, border-color 0.2s; }
+	.side-card:hover { box-shadow: 0 12px 26px -22px rgba(19, 32, 46, 0.5); }
+	.side-cats a { transition: background-color 0.15s, color 0.15s, padding-left 0.2s var(--gs-ease-out); }
+	.side-cats__kids a:hover { padding-left: 0.85rem; }
+}
+.cat-card { transition: border-color 0.15s, box-shadow 0.25s, transform 0.25s var(--gs-ease-out); }
+
+.entry-content a:not(.button),
+.term-description a,
+.woocommerce-product-details__short-description a {
+	text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+	transition: text-decoration-color 0.2s, color 0.15s;
+}
+.entry-content a:not(.button):hover,
+.term-description a:hover { text-decoration-color: currentColor; }
+
+/* product page gallery: gentle zoom on the main image */
+@media (hover: hover) {
+	/* (no hover effect on the product photo itself) */
+}
+
+/* footer, floating buttons */
+.social-links a { transition: transform 0.2s var(--gs-ease-out), border-color 0.2s, color 0.2s, background-color 0.2s; }
+@media (hover: hover) {
+	.social-links a:hover { transform: translateY(-3px); }
+	.back-to-top:hover svg { animation: gs-nudge-up 0.6s var(--gs-ease-out) infinite alternate; }
+}
+@keyframes gs-nudge-up { to { transform: translateY(-3px); } }
+.whatsapp-float { animation: gs-float-in 0.6s var(--gs-ease-out) 0.8s both; }
+@keyframes gs-float-in { from { opacity: 0; transform: translateY(20px) scale(0.9); } }
+.whatsapp-float::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	box-shadow: 0 0 0 0 rgba(31, 138, 76, 0.45);
+	animation: gs-ping 2.6s ease-out 2s 3;
+	pointer-events: none;
+}
+@keyframes gs-ping { 0% { box-shadow: 0 0 0 0 rgba(31, 138, 76, 0.45); } 80%, 100% { box-shadow: 0 0 0 14px rgba(31, 138, 76, 0); } }
+
+/* toast slides up a little more */
+.gs-toast { transition: transform 0.3s var(--gs-ease-out), opacity 0.25s; }
+
+/* ---------- Reduced motion: switch everything off ---------- */
+@media (prefers-reduced-motion: reduce) {
+	.gs-motion .gs-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+	*,
+	*::before,
+	*::after { animation: none !important; }
+	.woocommerce ul.products li.product:hover,
+	.cat-card:hover,
+	.button:hover { transform: none !important; }
+}

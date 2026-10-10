@@ -1,0 +1,21 @@
+/* Block editor: mirror front-end type. */
+body,
+.editor-styles-wrapper {
+	font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.0625rem;
+	line-height: 1.6;
+	color: #1b2730;
+}
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+	font-stretch: 85%;
+	font-weight: 600;
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+}
+.editor-styles-wrapper a { color: #2448c4; }
+.editor-styles-wrapper .wp-block { max-width: 760px; }
+.editor-styles-wrapper .wp-block[data-align="wide"] { max-width: 1100px; }
+.editor-styles-wrapper .wp-block[data-align="full"] { max-width: none; }

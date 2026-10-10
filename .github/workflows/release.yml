@@ -1,0 +1,42 @@
+name: Release theme
+
+# Push a tag like v1.14.0 and this builds gami-surgical.zip and publishes a
+# GitHub release with it. Sites running the theme then see "Update now".
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check tag matches style.css Version
+        id: version
+        run: |
+          VERSION=$(grep -m1 -E '^[[:space:]]*Version:' style.css | sed -E 's/^[[:space:]]*Version:[[:space:]]*//' | tr -d '\r[:space:]')
+          if [ "v$VERSION" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match style.css Version $VERSION"; exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build gami-surgical.zip
+        run: |
+          mkdir -p dist/gami-surgical
+          git archive HEAD | tar -x -C dist/gami-surgical
+          rm -rf dist/gami-surgical/.github dist/gami-surgical/.gitignore dist/gami-surgical/README.md
+          (cd dist && zip -qr gami-surgical.zip gami-surgical)
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/gami-surgical.zip \
+            --title "Gami Surgical $GITHUB_REF_NAME" \
+            --generate-notes \
+            --latest
