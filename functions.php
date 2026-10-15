@@ -32,6 +32,7 @@ $gami_includes = array(
 	'blog',
 	'blog-article',
 	'article-upload',
+	'site-setup',
 	'github-updater',
 );
 

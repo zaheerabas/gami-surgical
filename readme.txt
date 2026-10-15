@@ -244,6 +244,17 @@ loaded from Google Fonts.
 
 == Changelog ==
 
+= 1.17.0 =
+* Appearance > Gami Setup: creates the site's 35 pages (company, services,
+  product range, buyer help and policy pages), blank and ready for Elementor.
+* Runs automatically when the theme is installed or a new version is
+  uploaded. Missing pages are created; existing ones are put back to the
+  theme's title, address, parent and published status, keeping their
+  content and Elementor sections. Pages in the trash or in draft are restored.
+* The setup links the Home, Blog, Inquiry and Privacy Policy pages to the
+  right WordPress and theme settings.
+* Optional: create Main, Footer and Legal menus for empty menu locations.
+
 = 1.16.2 =
 * Blog cards use a wide 16:10 image size, so featured images (1600 x 900)
   show in full instead of being cut to a square.
